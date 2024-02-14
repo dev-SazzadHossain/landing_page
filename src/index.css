@@ -10,3 +10,6 @@ a {
 html {
   scroll-behavior: smooth;
 }
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  padding: 6px 12px !important;
+}
