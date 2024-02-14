@@ -141,29 +141,12 @@ const Navbar = () => {
               </Box>
               <Box
                 sx={{
-                  display: { xs: "none", md: "flex", lg: "flex" },
-                  gap: 0.5,
-                  alignItems: "center",
                   width: "140px",
+                  margin: "0 auto",
+                  textAlign: "center",
                 }}
               >
-                {/* <Button
-                                    color="primary"
-                                    variant="text"
-                                    size="small"
-                                    component="a"
-                                    target="_blank"
-                                >
-                                    <Link to="">Sign in</Link>
-                                </Button> */}
-                <Button
-                  color="primary"
-                  variant="contained"
-                  component="a"
-                  target="_blank"
-                >
-                  Sign up
-                </Button>
+                <Button variant="contained">Sign Up</Button>
               </Box>
               {/* ToggleButton And Driver */}
               <Box
