@@ -142,8 +142,6 @@ const Navbar = () => {
               <Box
                 sx={{
                   display: { xs: "none", md: "flex", lg: "flex" },
-                  gap: 0.5,
-                  alignItems: "center",
                 }}
               >
                 {/* <Button
