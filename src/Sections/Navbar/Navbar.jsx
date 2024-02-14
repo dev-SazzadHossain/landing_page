@@ -142,6 +142,9 @@ const Navbar = () => {
               <Box
                 sx={{
                   display: { xs: "none", md: "flex", lg: "flex" },
+                  gap: 0.5,
+                  alignItems: "center",
+                  width: "140px",
                 }}
               >
                 {/* <Button
@@ -156,7 +159,6 @@ const Navbar = () => {
                 <Button
                   color="primary"
                   variant="contained"
-                  size="small"
                   component="a"
                   target="_blank"
                 >
