@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./Navbar.css";
 import img from "../../assets/pricing_icon_2.svg";
+import { ButtonBox } from "../../utils/Button/Button";
 
 const Navbar = () => {
   const { hash } = useLocation();
@@ -151,7 +152,7 @@ const Navbar = () => {
                   display: { lg: "block", md: "block", sm: "none", xs: "none" },
                 }}
               >
-                <Button
+                <ButtonBox
                   variant="contained"
                   sx={{
                     textAlign: "center",
@@ -160,7 +161,7 @@ const Navbar = () => {
                   }}
                 >
                   Sign Up
-                </Button>
+                </ButtonBox>
               </Box>
               {/* ToggleButton And Driver */}
               <Box

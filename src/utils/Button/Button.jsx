@@ -3,6 +3,7 @@ import React from "react";
 import EastIcon from "@mui/icons-material/East";
 
 export const ButtonBox = ({ style, children }) => {
+  console.log(children);
   return (
     <Button
       variant="contained"
@@ -20,7 +21,7 @@ export const ButtonBox = ({ style, children }) => {
         },
       }}
     >
-      {children} <EastIcon />
+      {children} {children == "Sign Up" ? "" : <EastIcon />}
     </Button>
   );
 };
