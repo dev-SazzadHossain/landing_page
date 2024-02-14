@@ -141,12 +141,25 @@ const Navbar = () => {
               </Box>
               <Box
                 sx={{
-                  width: "140px",
+                  width: "20%",
                   margin: "0 auto",
-                  textAlign: "center",
+
+                  p: "2px 3px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <Button variant="contained">Sign Up</Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    textAlign: "center",
+
+                    width: "80%",
+                  }}
+                >
+                  Sign Up
+                </Button>
               </Box>
               {/* ToggleButton And Driver */}
               <Box
