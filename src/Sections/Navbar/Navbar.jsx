@@ -148,6 +148,7 @@ const Navbar = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  display: { lg: "block", md: "block", sm: "none", xs: "none" },
                 }}
               >
                 <Button
