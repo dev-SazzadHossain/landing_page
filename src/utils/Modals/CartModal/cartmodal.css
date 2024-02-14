@@ -1,0 +1,13 @@
+.responsive {
+    width: 100%;
+}
+
+/*------------------lg--md------------------- */
+@media (min-width: 768px) {
+    .responsive {
+        width: 50%;
+    }
+}
+.input-group.mb-3 {
+    z-index: 1 !important;
+}
