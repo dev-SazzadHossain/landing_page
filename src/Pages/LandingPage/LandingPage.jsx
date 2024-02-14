@@ -9,6 +9,7 @@ import Feature from "../../Sections/Feature/Feature";
 import Pricing from "../../Sections/Pricing/Pricing";
 import { PosFaq } from "../../Sections/PosFaq/PosFaq";
 import { Footer } from "../../Sections/Footer/Footer";
+import { Contact } from "../../Sections/Contact/Contact";
 
 export const LandingPage = () => {
   return (
@@ -27,6 +28,7 @@ export const LandingPage = () => {
         <Navbar />
       </Box>
       <Box
+        id="home"
         sx={{
           width: {
             lg: "1200px",
@@ -59,6 +61,12 @@ export const LandingPage = () => {
       </Box>
       <Box sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}>
         <PosFaq />
+      </Box>
+      <Box
+        id="contact"
+        sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}
+      >
+        <Contact />
       </Box>
       <Box sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}>
         <Footer />

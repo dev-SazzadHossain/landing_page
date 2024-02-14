@@ -78,7 +78,7 @@ const Hero = () => {
             mt: "30px",
           }}
         >
-          <ButtonBox style={{}} />
+          <ButtonBox>View More</ButtonBox>
         </Box>
       </Box>
       <Box
