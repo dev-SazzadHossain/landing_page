@@ -3,6 +3,12 @@ import { Box, Container } from "@mui/material";
 import Navbar from "../../Sections/Navbar/Navbar";
 import Gap from "../../utils/Gap/Gap";
 import Hero from "../../Sections/Hero/Hero";
+import Inventory from "../../Sections/Inventory/Inventory";
+import About from "../../Sections/About/About";
+import Feature from "../../Sections/Feature/Feature";
+import Pricing from "../../Sections/Pricing/Pricing";
+import { PosFaq } from "../../Sections/PosFaq/PosFaq";
+import { Footer } from "../../Sections/Footer/Footer";
 
 export const LandingPage = () => {
   return (
@@ -20,8 +26,42 @@ export const LandingPage = () => {
       >
         <Navbar />
       </Box>
-      <Box sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}>
+      <Box
+        sx={{
+          width: {
+            lg: "1200px",
+            md: "100%",
+            sm: "100%",
+            xs: "100%",
+          },
+          pt: "80px",
+        }}
+      >
         <Hero />
+      </Box>
+      <Box sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}>
+        <Inventory />
+      </Box>
+      <Box
+        id="about"
+        sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}
+      >
+        <About />
+      </Box>
+      <Box
+        id="feature"
+        sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}
+      >
+        <Feature />
+      </Box>
+      <Box sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}>
+        <Pricing />
+      </Box>
+      <Box sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}>
+        <PosFaq />
+      </Box>
+      <Box sx={{ width: { lg: "1200px", md: "100%", sm: "100%", xs: "100%" } }}>
+        <Footer />
       </Box>
     </Container>
   );

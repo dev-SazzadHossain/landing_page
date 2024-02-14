@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,8 +12,11 @@ import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./Navbar.css";
+import img from "../../assets/pricing_icon_2.svg";
 
 const Navbar = () => {
+  const { hash } = useLocation();
+
   const [open, setOpen] = useState(false);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -22,9 +25,15 @@ const Navbar = () => {
     <div>
       <div>
         <Box
-        //   sx={{
-        //     bgcolor: "white",
-        //   }}
+          sx={{
+            position: "fixed",
+            width: "100%",
+            left: 0,
+            zIndex: 300,
+            boxShadow: 1,
+            backgroundImage:
+              "linear-gradient(to right, #ffffff, #dcdcdc, #ffffffe7)",
+          }}
         >
           <Container>
             <Toolbar
@@ -42,13 +51,15 @@ const Navbar = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <Typography
-                  sx={{
-                    color: "black",
-                  }}
-                >
-                  Logo
-                </Typography>
+                <a href="#home">
+                  <Typography
+                    sx={{
+                      color: "black",
+                    }}
+                  >
+                    <img src={img} alt="" />
+                  </Typography>
+                </a>
               </Box>
               <Box
                 sx={{
@@ -66,64 +77,65 @@ const Navbar = () => {
                       px: "12px",
                     }}
                   >
-                    <Typography
-                      variant="body2"
-                      color="text.primary"
-                      sx={{
-                        fontFamily: "sans-serif",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Home
-                    </Typography>
+                    <a href="#home">
+                      <Typography
+                        variant="body2"
+                        color="text.primary"
+                        sx={{
+                          fontFamily: "sans-serif",
+                          fontSize: "16px",
+                          color: hash == "#home" ? "blue" : "",
+                        }}
+                      >
+                        Home
+                      </Typography>
+                    </a>
                   </MenuItem>
                   <MenuItem sx={{ py: "6px", px: "12px" }}>
-                    <Typography
-                      variant="body2"
-                      color="text.primary"
-                      sx={{
-                        fontFamily: "sans-serif",
-                        fontSize: "16px",
-                      }}
-                    >
-                      About
-                    </Typography>
+                    <a href="#about">
+                      <Typography
+                        variant="body2"
+                        color="text.primary"
+                        sx={{
+                          fontFamily: "sans-serif",
+                          fontSize: "16px",
+                          color: hash == "#about" ? "blue" : "",
+                        }}
+                      >
+                        About
+                      </Typography>
+                    </a>
                   </MenuItem>
                   <MenuItem sx={{ py: "6px", px: "12px" }}>
-                    <Typography
-                      variant="body2"
-                      color="text.primary"
-                      sx={{
-                        fontFamily: "sans-serif",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Feature
-                    </Typography>
+                    <a href="#feature">
+                      <Typography
+                        variant="body2"
+                        color="text.primary"
+                        sx={{
+                          fontFamily: "sans-serif",
+                          fontSize: "16px",
+                          color: hash == "#feature" ? "blue" : "",
+                        }}
+                      >
+                        Feature
+                      </Typography>
+                    </a>
                   </MenuItem>
+
                   <MenuItem sx={{ py: "6px", px: "12px" }}>
-                    <Typography
-                      variant="body2"
-                      color="text.primary"
-                      sx={{
-                        fontFamily: "sans-serif",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Blog
-                    </Typography>
-                  </MenuItem>
-                  <MenuItem sx={{ py: "6px", px: "12px" }}>
-                    <Typography
-                      variant="body2"
-                      color="text.primary"
-                      sx={{
-                        fontFamily: "sans-serif",
-                        fontSize: "16px",
-                      }}
-                    >
-                      Contact
-                    </Typography>
+                    <a href="#contact">
+                      <Typography
+                        variant="body2"
+                        color="text.primary"
+                        sx={{
+                          fontFamily: "sans-serif",
+                          fontSize: "16px",
+                          color: hash == "#contact" ? "blue" : "",
+                        }}
+                      >
+                        Contact
+                      </Typography>
+                    </a>
                   </MenuItem>
                 </Box>
               </Box>
@@ -185,7 +197,7 @@ const Navbar = () => {
                       },
                     }}
                   >
-                    <MenuIcon />
+                    <MenuIcon sx={{ fontSize: "28px" }} />
                   </Button>
                 </Box>
                 {/* ToggleDrawer */}
@@ -207,9 +219,13 @@ const Navbar = () => {
                       }}
                     ></Box>
                     <MenuItem>Home</MenuItem>
-                    <MenuItem>About</MenuItem>
-                    <MenuItem>Feature</MenuItem>
-                    <MenuItem>Blog</MenuItem>
+                    <MenuItem>
+                      <a href="#about">About</a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a href="#feature">Feature</a>
+                    </MenuItem>
+
                     <MenuItem>Contact</MenuItem>
                     <Divider />
                     <MenuItem>
